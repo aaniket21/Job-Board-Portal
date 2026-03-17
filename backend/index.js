@@ -32,6 +32,10 @@ app.use("/api/v1/company", companyRoute);
 app.use("/api/v1/job", jobRoute);
 app.use("/api/v1/application", applicationRoute);
 
+app.get("/health", (_req, res) => {
+    res.json({ ok: true });
+});
+
 
 
 app.listen(PORT,()=>{
